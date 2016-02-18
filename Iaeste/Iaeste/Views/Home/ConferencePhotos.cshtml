@@ -1,0 +1,26 @@
+﻿@using WebGrease.Css
+@{
+    ViewBag.Title = "ConferencePhotos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ConferencePhotos</h2>
+<div>
+
+    @foreach (var img in (IEnumerable<string>)ViewBag.Images)
+    {
+        <div class="imgContainer" id="imgContainer">
+            <a href="@String.Concat("#",img.GetHashCode())" data-rel="popup" data-position-to="window">
+                <img class="img" src="@Url.Content(img)" alt="Fjords">
+            </a>
+            <div class="imgDesc">Description</div>
+
+            <div data-role="popup" id="@img.GetHashCode()">
+                <p>Description</p>
+                <a href="#imgContainer" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <img src="@Url.Content(img)" style=" width:700px; height:400px;" alt="Skaret View">
+            </div>
+        </div>
+    }
+
+</div>

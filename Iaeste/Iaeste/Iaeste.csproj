@@ -146,6 +146,8 @@
     <Content Include="Content\Images\Conference2016\marie-avgeropoulos-10657-2560x1440.jpg" />
     <Content Include="Content\Images\Conference2016\nastol.com.ua-126652.jpg" />
     <Content Include="Content\Images\Conference2016\reWalls.com-75566.jpg" />
+    <Content Include="Content\Images\Logo-IAESTE-white-transparent-background1.png" />
+    <Content Include="Content\Master.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -230,6 +232,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\ConferencePhotos.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

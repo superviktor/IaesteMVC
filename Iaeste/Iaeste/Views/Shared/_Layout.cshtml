@@ -4,16 +4,59 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Master.css")
     @Scripts.Render("~/bundles/modernizr")
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    @*<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-</head>
-<body>
-    @RenderBody()
-
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>*@
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
-</body>
+</head>
+    <body>
+        <div class="header">
+            @*logo*@
+            <div id="logo">
+                <img src="~/Content/Images/Logo-IAESTE-white-transparent-background1.png" height="200" />
+                <p id="logoText">Ukraine</p>
+            </div>
+
+            @*splitter*@
+            <div class="splitter">
+            </div>
+
+            @*navigation*@
+            <div class="navDiv">
+                <label for="show-menu" class="show-menu">Show Menu</label>
+                <input type="checkbox" id="show-menu" role="button" />
+                <ul id="menu">
+                    <li class="current"><a href="">Головна</a></li>
+                    <li><a href="#">Вимоги</a></li>
+                    <li>
+                        <a href="#">Конференція</a>
+                        <ul class="hidden">
+                            <li><a href="#">2015</a></li>
+                            <li><a href="#">2016</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Інтернаціоналізація освіти</a></li>
+                    <li><a href="#">Сучасна математика для інженерів</a></li>
+                    <li><a href="#">Офери</a></li>
+                </ul>
+            </div>
+
+            @*splitter*@
+            <div class="splitter">
+            </div>
+
+        </div>
+
+        @RenderBody()
+
+        @*splitter*@
+        <div class="splitter">
+        </div>
+
+        <div class="footer"></div>
+       
+    </body>
 </html>

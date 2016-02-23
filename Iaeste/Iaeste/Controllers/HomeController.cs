@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
+
 
 namespace Iaeste.Controllers
 {
@@ -11,7 +14,7 @@ namespace Iaeste.Controllers
     {
         //
         // GET: /Home/
-
+        private int photoCounter = (int) System.Web.HttpContext.Current.Application["PhotoCounter"] | 0;
         public ActionResult Index()
         {
             return View();
@@ -22,6 +25,28 @@ namespace Iaeste.Controllers
             ViewBag.Images = Directory.EnumerateFiles(Server.MapPath("~/Content/Images/Conference2016"))
                              .Select(fn => "~/Content/Images/Conference2016/" + Path.GetFileName(fn));
             return View();
+        }
+        [System.Web.Mvc.HttpPost]
+        public ActionResult ConferencePhotos(HttpPostedFileBase file)
+        {
+            //create a system where filenames will start from 000 and bigger
+            photoCounter++;
+            System.Web.HttpContext.Current.Application["PhotoCounter"] = photoCounter;
+            string fileName = Guid.NewGuid().ToString();
+            string extencion = Path.GetExtension(file.FileName);
+            fileName += extencion;
+            List<string> extencions = new List<string>() {".png", ".jpg",".txt"};
+            if (extencions.Contains(extencion))
+            {
+                file.SaveAs(Server.MapPath("/Content/Images/Conference2016/" + fileName));
+                ViewBag.Message = "Saved";
+            }
+            else
+            {
+                ViewBag.Message = "Error";
+            }
+           
+            return View("Index");
         }
 
     }

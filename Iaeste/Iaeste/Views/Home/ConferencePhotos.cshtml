@@ -3,10 +3,12 @@
     ViewBag.Title = "ConferencePhotos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+
 
 <h2>ConferencePhotos</h2>
 <div>
-
+    
     @foreach (var img in (IEnumerable<string>)ViewBag.Images)
     {
         <div class="imgContainer" id="imgContainer">
@@ -15,12 +17,21 @@
             </a>
             <div class="imgDesc">Description</div>
 
-            <div data-role="popup" id="@img.GetHashCode()">
+            @*<div data-role="popup" id="@img.GetHashCode()">
                 <p>Description</p>
                 <a href="#imgContainer" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
                 <img src="@Url.Content(img)" style=" width:700px; height:400px;" alt="Skaret View">
-            </div>
+            </div>*@
         </div>
     }
 
 </div>
+
+<form action="@Url.Action("ConferencePhotos")" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" multiple/>
+    <br/>
+    <input type="submit"/>
+    <p>@ViewBag.Message </p>
+</form>
+
+

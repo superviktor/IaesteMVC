@@ -147,6 +147,7 @@
     <Content Include="Content\Images\Conference2016\nastol.com.ua-126652.jpg" />
     <Content Include="Content\Images\Conference2016\reWalls.com-75566.jpg" />
     <Content Include="Content\Images\Logo-IAESTE-white-transparent-background1.png" />
+    <Content Include="Content\Index.css" />
     <Content Include="Content\Master.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />

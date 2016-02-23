@@ -14,7 +14,6 @@ namespace Iaeste.Controllers
     {
         //
         // GET: /Home/
-        private int photoCounter = (int) System.Web.HttpContext.Current.Application["PhotoCounter"] | 0;
         public ActionResult Index()
         {
             return View();
@@ -29,9 +28,8 @@ namespace Iaeste.Controllers
         [System.Web.Mvc.HttpPost]
         public ActionResult ConferencePhotos(HttpPostedFileBase file)
         {
-            //create a system where filenames will start from 000 and bigger
-            photoCounter++;
-            System.Web.HttpContext.Current.Application["PhotoCounter"] = photoCounter;
+            //TODO: create a system where filenames will start from 000 and bigger
+   
             string fileName = Guid.NewGuid().ToString();
             string extencion = Path.GetExtension(file.FileName);
             fileName += extencion;

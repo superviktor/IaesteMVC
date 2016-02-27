@@ -14,10 +14,21 @@
     color: white;
 }
 
-
 .explainText {
     font-size: 20px;
     color: white;
     margin: 10px;
     text-align: left;
+}
+
+.table td{
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    padding: 6px;
+}
+
+.table td img {
+    height: 24px;
+    width: 36px;
 }

@@ -3,6 +3,7 @@
 }
 
 .explain {
+    margin-top: 10px;
     width: 100%;
     text-align: center;
 }
@@ -21,14 +22,26 @@
     text-align: left;
 }
 
-.table td{
+.table td {
     font-size: 20px;
     color: white;
     text-align: left;
     padding: 6px;
 }
 
-.table td img {
-    height: 24px;
-    width: 36px;
+    .table td img {
+        height: 24px;
+        width: 36px;
+    }
+
+.bigText {
+    margin-top: 20px;
 }
+
+.plainText {
+    width: 70%;
+    margin: 0 auto;  
+    color: white;
+    font-size: 18px;
+}
+

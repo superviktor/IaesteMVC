@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Iaeste.Models.Question>
+
+@{
+    ViewBag.Title = "FAQ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/FAQ.css")
+@Styles.Render("~/Content/Index.css")
+
+@*title*@
+<div class="bigText">
+    <p class="title">FAQ</p>
+</div>
+
+
+@*TODO:table of content like https://help.ubuntu.com/community/ServerFaq*@
+
+@foreach (var item in Model)
+{
+    <div class="questionContainer">
+        <div class="question">@item.Text</div>
+        <div class="answer">@item.Answer</div>
+    </div>
+}
+

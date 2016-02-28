@@ -1,0 +1,29 @@
+﻿body {
+    background: black;
+    color: white;
+}
+
+.offers {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.offerContainer {
+    width: 220px;
+    display: inline-block;
+    margin: 10px;
+}
+
+    .offerContainer object {
+        width: 200px;
+        height: 300px;
+        display: inline-block;
+    }
+
+    .offerContainer a{
+        color: white;
+    }
+    .offerContainer a:hover{
+        color: #19c589;      
+    }
+    

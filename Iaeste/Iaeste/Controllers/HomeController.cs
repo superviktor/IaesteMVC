@@ -48,6 +48,10 @@ namespace Iaeste.Controllers
             return View("Index");
         }
 
+        public ActionResult Offers()
+        {
+            return View();
+        }
 
         public ActionResult FAQ()
         {

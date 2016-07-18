@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -148,6 +149,14 @@
     <Content Include="Content\Images\Conference2016\marie-avgeropoulos-10657-2560x1440.jpg" />
     <Content Include="Content\Images\Conference2016\nastol.com.ua-126652.jpg" />
     <Content Include="Content\Images\Conference2016\reWalls.com-75566.jpg" />
+    <Content Include="Content\Images\FAQphotos\1.png" />
+    <Content Include="Content\Images\FAQphotos\Alex.jpg" />
+    <Content Include="Content\Images\FAQphotos\Alla.jpg" />
+    <Content Include="Content\Images\FAQphotos\Igor.jpg" />
+    <Content Include="Content\Images\FAQphotos\Ira.jpg" />
+    <Content Include="Content\Images\FAQphotos\olgaaa.jpg" />
+    <Content Include="Content\Images\FAQphotos\Slava.jpg" />
+    <Content Include="Content\Images\FAQphotos\Stas.jpg" />
     <Content Include="Content\Images\Flags\arg.png" />
     <Content Include="Content\Images\Flags\arm.png" />
     <Content Include="Content\Images\Flags\austra.png" />

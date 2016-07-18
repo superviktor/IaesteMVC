@@ -24,3 +24,9 @@ E:\IaesteMVC\Iaeste\Iaeste\bin\System.Web.WebPages.Razor.xml
 E:\IaesteMVC\Iaeste\Iaeste\obj\Debug\Iaeste.csprojResolveAssemblyReference.cache
 E:\IaesteMVC\Iaeste\Iaeste\obj\Debug\Iaeste.dll
 E:\IaesteMVC\Iaeste\Iaeste\obj\Debug\Iaeste.pdb
+E:\IaesteMVC\Iaeste\Iaeste\bin\System.Net.Http.Formatting.dll
+E:\IaesteMVC\Iaeste\Iaeste\bin\System.Web.Http.dll
+E:\IaesteMVC\Iaeste\Iaeste\bin\System.Web.Http.WebHost.dll
+E:\IaesteMVC\Iaeste\Iaeste\bin\System.Net.Http.Formatting.xml
+E:\IaesteMVC\Iaeste\Iaeste\bin\System.Web.Http.xml
+E:\IaesteMVC\Iaeste\Iaeste\bin\System.Web.Http.WebHost.xml

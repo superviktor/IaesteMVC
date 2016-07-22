@@ -1,52 +1,29 @@
-﻿@{
+﻿@model IEnumerable<string>
+
+@{
     ViewBag.Title = "Offers";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Styles.Render("~/Content/Offers.css")
 
 <h2>Offers</h2>
+
 <div class="offers" >
-    <div class="offerContainer" >
-        <p class="offerDesc">Offer Description is here. tesl big text is here. lalallaa; </p>
-        <object data="~/Content/PDFs/a3_all.pdf" type="application/pdf"></object>
-        <div style="background: #2f3036"><a href="~/Content/PDFs/a3_all.pdf" target="blank">View Details</a></div>
-        
-    </div>
+   @foreach (var str in @Model)
+   {
     <div class="offerContainer">
         <p class="offerDesc">Offer Description is here. tesl big text is here. lalallaa; </p>
-        <object data="~/Content/PDFs/Skhema_elekrichna.pdf" type="application/pdf"></object>
-        <div style="background: #2f3036"><a href="~/Content/PDFs/a3_all.pdf" target="blank">View Details</a></div>
-    </div>
-    <div class="offerContainer">
-        <p class="offerDesc">Offer Description is here. tesl big text is here. lalallaa; </p>
-        <object data="~/Content/PDFs/Skhema_funkts.pdf" type="application/pdf"></object>
-        <div style="background: #2f3036"><a href="~/Content/PDFs/a3_all.pdf" target="blank">View Details</a></div>
-    </div>
-    <div class="offerContainer">
-        <p class="offerDesc">Offer Description is here. tesl big text is here. lalallaa; </p>
-        <object data="~/Content/PDFs/Skhema_schit.pdf" type="application/pdf"></object>
-        <div style="background: #2f3036"><a href="~/Content/PDFs/a3_all.pdf" target="blank">View Details</a></div>
-    </div>
-    <div class="offerContainer">
-        <p class="offerDesc">Offer Description is here. tesl big text is here. lalallaa; </p>
-        <object data="~/Content/PDFs/a3_all.pdf" type="application/pdf"></object>
-        <div style="background: #2f3036"><a href="~/Content/PDFs/a3_all.pdf" target="blank">View Details</a></div>
+        <object data="@Url.Content(str)" type="application/pdf"></object>
+        <div style="background: #2f3036"><a href="@Url.Content(str)" target="blank">View Details</a></div>
 
     </div>
-    <div class="offerContainer">
-        <p class="offerDesc">Offer Description is here. tesl big text is here. lalallaa; </p>
-        <object data="~/Content/PDFs/Skhema_elekrichna.pdf" type="application/pdf"></object>
-        <div style="background: #2f3036"><a href="~/Content/PDFs/a3_all.pdf" target="blank">View Details</a></div>
-    </div>
-    <div class="offerContainer">
-        <p class="offerDesc">Offer Description is here. tesl big text is here. lalallaa; </p>
-        <object data="~/Content/PDFs/Skhema_funkts.pdf" type="application/pdf"></object>
-        <div style="background: #2f3036"><a href="~/Content/PDFs/a3_all.pdf" target="blank">View Details</a></div>
-    </div>
-    <div class="offerContainer">
-        <p class="offerDesc">Offer Description is here. tesl big text is here. lalallaa; </p>
-        <object data="~/Content/PDFs/Skhema_schit.pdf" type="application/pdf"></object>
-        <div style="background: #2f3036"><a href="~/Content/PDFs/a3_all.pdf" target="blank">View Details</a></div>
-    </div>
+   }  
 </div>
+
+<form action="@Url.Action("Offers")" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" multiple />
+    <br />
+    <input type="submit" />
+    <p>@ViewBag.Message </p>
+</form>
 

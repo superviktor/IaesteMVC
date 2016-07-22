@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using Iaeste.Models;
 
 
+
 namespace Iaeste.Controllers
 {
     public class HomeController : Controller
@@ -20,6 +21,7 @@ namespace Iaeste.Controllers
             return View();
         }
 
+        [System.Web.Http.HttpGet]
         public ActionResult ConferencePhotos()
         {
             ViewBag.Images = Directory.EnumerateFiles(Server.MapPath("~/Content/Images/Conference2016"))
@@ -48,11 +50,35 @@ namespace Iaeste.Controllers
             return View("Index");
         }
 
+        [System.Web.Mvc.HttpGet]
         public ActionResult Offers()
         {
-            return View();
+            var offersSet = Directory.EnumerateFiles(Server.MapPath("~/Content/PDFs/"))
+                             .Select(fn => "~/Content/PDFs/" + Path.GetFileName(fn));
+            return View(offersSet);
         }
 
+        [System.Web.Mvc.HttpPost]
+        public ActionResult Offers(HttpPostedFileBase file)
+        {
+            //create a system of naming to locate file in the top of the page
+            //how enter description ??
+            string fileName = Guid.NewGuid().ToString();
+            string extencion = Path.GetExtension(file.FileName);
+            fileName += extencion;
+            List<string> extencions = new List<string>() { ".pdf"};
+            if (extencions.Contains(extencion))
+            {
+                file.SaveAs(Server.MapPath("/Content/PDFs/1" + fileName));
+                ViewBag.Message = "Saved";
+            }
+            else
+            {
+                ViewBag.Message = "Error";
+            }
+
+            return RedirectToAction("Offers");
+        }
         public ActionResult FAQ()
         {
             List<Question> list = new List<Question>();

@@ -30,3 +30,5 @@ E:\IaesteMVC\Iaeste\Iaeste\bin\System.Web.Http.WebHost.dll
 E:\IaesteMVC\Iaeste\Iaeste\bin\System.Net.Http.Formatting.xml
 E:\IaesteMVC\Iaeste\Iaeste\bin\System.Web.Http.xml
 E:\IaesteMVC\Iaeste\Iaeste\bin\System.Web.Http.WebHost.xml
+E:\IaesteMVC\Iaeste\Iaeste\bin\EntityFramework.SqlServer.dll
+E:\IaesteMVC\Iaeste\Iaeste\bin\EntityFramework.SqlServer.xml

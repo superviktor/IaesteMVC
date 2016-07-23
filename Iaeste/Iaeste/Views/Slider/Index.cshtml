@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Iaeste.Models.Gallery>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Add Image", "AddImage", "Slider", new { id = "linkAddimage" }, null) |
+    @Html.ActionLink("Delete Image", "DeleteImages", "Slider", new { id = "linkDeleteImage" }, null)
+</p>
+@Html.Partial("~/Views/Shared/SliderPartial.cshtml", Model)
+

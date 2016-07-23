@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/Master.css")
-    @Scripts.Render("~/bundles/modernizr")
-    @*<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>*@
+    @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/slider")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Scripts/jquery.bxslider.js")
+    @Styles.Render("~/Content/jquery.bxslider.css")
+    <link href="~/Content/jquery.bxslider.css" rel="stylesheet" />
+
     @RenderSection("scripts", required: false)
 </head>
     <body>

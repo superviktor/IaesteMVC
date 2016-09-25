@@ -65,3 +65,4 @@ C:\Users\Viktor\Documents\GitHub\IaesteMVC\Iaeste\Iaeste\bin\System.Web.WebPages
 C:\Users\Viktor\Documents\GitHub\IaesteMVC\Iaeste\Iaeste\bin\System.Web.WebPages.Razor.xml
 C:\Users\Viktor\Documents\GitHub\IaesteMVC\Iaeste\Iaeste\obj\Debug\Iaeste.dll
 C:\Users\Viktor\Documents\GitHub\IaesteMVC\Iaeste\Iaeste\obj\Debug\Iaeste.pdb
+C:\Users\Viktor\Documents\GitHub\IaesteMVC\Iaeste\Iaeste\obj\Debug\Iaeste.csprojResolveAssemblyReference.cache

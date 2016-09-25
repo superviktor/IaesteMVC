@@ -45,3 +45,8 @@
     font-size: 18px;
 }
 
+
+.simpleVerticalLi {
+    display: block;
+    float: none
+}

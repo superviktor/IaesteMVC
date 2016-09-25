@@ -1,0 +1,34 @@
+﻿@Styles.Render("~/Content/FAQ.css")
+@Styles.Render("~/Content/Index.css")
+
+@*title*@
+<div class="bigText">
+    <p class="title" style="text-align: justify">Стажування українських студентів за кордоном у відповідності до фаху на 2017 рік</p>
+</div>
+
+
+<div>
+    <p style="text-align: center; font-size: 28px">Умови конкурсу</p>
+    <style>
+        ol {
+            counter-reset: item;
+        }
+
+            ol li {
+                display: block;
+                font-size: 22px;
+            }
+
+                ol li:before {
+                    content: counter(item) ". ";
+                    counter-increment: item;
+                    color: white;
+                    font-size: 22px;
+                }
+    </style>
+    <ol >
+        <li >Успіхи в навчанні в університетах України (середній бал визначається за заліковою книжкою).</li>
+        <li >Володіння англійською мовою (рівень визначається на підставі внутрішнього тесту).</li>
+        <li >Спонсорський внесок для фінансування обмінної програми.</li>
+    </ol>
+</div>

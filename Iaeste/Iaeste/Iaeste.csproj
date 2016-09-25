@@ -331,6 +331,7 @@
     <Content Include="Views\Slider\AddImage.cshtml" />
     <Content Include="Views\Slider\DeleteImages.cshtml" />
     <Content Include="Views\Shared\Gallery.cshtml" />
+    <Content Include="Views\Home\Requirments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

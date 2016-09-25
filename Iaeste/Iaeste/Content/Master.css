@@ -55,7 +55,7 @@ ul {
 /*Create a horizontal list with spacing*/
 li {
     display: inline-block;
-    float: left;
+    /*float: left;*/
     margin-right: 0px;
 }
 

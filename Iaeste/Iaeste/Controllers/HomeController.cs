@@ -109,5 +109,10 @@ namespace Iaeste.Controllers
 
             return View(list);
         }
+
+        public ActionResult Requirments()
+        {
+            return View();
+        }
     }
 }
